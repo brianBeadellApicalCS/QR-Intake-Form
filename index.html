@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Submission - Apical Crop Science</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Apical Logo at the top -->
+    <div class="logo-container">
+        <img src="images/Apical_Logo_Final_wTagline_Pantone.jpg" alt="Apical Logo" class="logo">
+    </div>
+
+    <!-- Form Title -->
+    <h1>Apical Crop Science - Sample Submission Form</h1>
+
+    <!-- Error message placeholder -->
+    <p id="errorMessage" style="color: red;"></p>
+
+    <!-- Form for sample submission -->
+    <form id="sampleForm">
+        <div class="form-group">
+            <label for="userType">User Type:</label>
+            <select id="userType" name="userType">
+                <option value="Apical Direct">Apical Direct</option>
+                <option value="Consultant">Consultant</option>
+                <option value="Dealer">Dealer</option>
+                <option value="Bonsai Mirai">Bonsai Mirai</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="clientName">Client Name (Autofill):</label>
+            <input type="text" id="clientName" name="clientName" placeholder="Autofilled with portal info" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cultivar">Cultivar:</label>
+            <select id="cultivar" name="cultivar">
+                <option value="Grape">Grape</option>
+                <option value="Tomato">Tomato</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Add New Cultivar">Add New Cultivar</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="reportType">Report Type:</label>
+            <select id="reportType" name="reportType">
+                <option value="Leaf Extract Analysis">Leaf Extract Analysis</option>
+                <option value="Soil Solution Analysis">Soil Solution Analysis (Deep/Shallow)</option>
+                <option value="Irrigation Water Analysis">Irrigation Water Analysis</option>
+                <option value="Crop Nutrient Analysis">Crop Nutrient Analysis</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="sampleDate">Sample Date:</label>
+            <input type="date" id="sampleDate" name="sampleDate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="clientAddress">Client Address for Postal Delivery (Not Required):</label>
+            <input type="text" id="clientAddress" name="clientAddress" placeholder="e.g. 1382 SE 3rd Ave, Canby, OR 97013">
+        </div>
+
+        <div class="form-group">
+            <label for="cropHealth">Crop Health:</label>
+            <select id="cropHealth" name="cropHealth">
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+                <option value="Critical">Critical</option>
+                <option value="Unhealthy">Unhealthy</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="acreage">Acreage:</label>
+            <input type="number" id="acreage" name="acreage" placeholder="Enter acreage" required>
+        </div>
+
+        <button type="submit">Submit Sample</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

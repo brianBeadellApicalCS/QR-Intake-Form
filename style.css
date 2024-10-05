@@ -1,0 +1,86 @@
+/* General styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Styling for the logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    color: #2d2d2d;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Form container styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px 20px; /* Reduced padding inside the form */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 12px; /* Reduced margin between form groups */
+}
+
+label {
+    display: block;
+    margin-bottom: 6px; /* Reduced space between label and input */
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px; /* Reduced padding inside inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Styling for the submit button */
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px; /* Slightly reduced margin above button */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Error message styling */
+#errorMessage {
+    color: red;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 15px; /* Slightly reduced margin below error message */
+}

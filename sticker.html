@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printable Sticker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- QR Code Generator Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <!-- Success message outside of the sticker -->
+    <h2 id="successMessage">Sample Entry Successfully Created</h2>
+
+    <!-- Sticker content with logo inside and borders -->
+    <div id="sticker">
+        <!-- Apical Logo inside the sticker -->
+        <div class="logo-container">
+            <img src="images/Apical_Logo_Final_wTagline_Pantone.jpg" alt="Apical Logo" class="logo">
+        </div>
+
+        <!-- Bordered sticker content -->
+        <div class="sticker-content">
+            <div class="sticker-border">
+                <p><strong>User Type:</strong> <span id="stickerUserType"></span></p>
+                <p><strong>Client Name:</strong> <span id="stickerClientName"></span></p>
+                <p><strong>Cultivar:</strong> <span id="stickerCultivar"></span></p>
+                <p><strong>Report Type:</strong> <span id="stickerReportType"></span></p>
+                <p><strong>Sample Date:</strong> <span id="stickerSampleDate"></span></p>
+                <p><strong>Client Address:</strong> <span id="stickerClientAddress"></span></p>
+                <p><strong>Crop Health:</strong> <span id="stickerCropHealth"></span></p>
+                <p><strong>Acreage:</strong> <span id="stickerAcreage"></span></p>
+            </div>
+        </div>
+
+        <!-- QR Code will be shown here -->
+        <div id="stickerQrCode" style="margin: 20px 0;"></div>
+    </div>
+
+    <!-- Print Sticker button (square button) -->
+    <button id="printStickerBtn" class="square-button" onclick="printSticker()">Print Sticker</button>
+
+    <script>
+        // Function to get URL parameters (data passed from form submission page)
+        function getUrlParameter(param) {
+            let params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
+
+        // Populate the sticker fields with values from URL parameters
+        document.getElementById('stickerUserType').innerText = getUrlParameter('userType');
+        document.getElementById('stickerClientName').innerText = getUrlParameter('clientName');
+        document.getElementById('stickerCultivar').innerText = getUrlParameter('cultivar');
+        document.getElementById('stickerReportType').innerText = getUrlParameter('reportType');
+        document.getElementById('stickerSampleDate').innerText = getUrlParameter('sampleDate');
+        document.getElementById('stickerClientAddress').innerText = getUrlParameter('clientAddress');
+        document.getElementById('stickerCropHealth').innerText = getUrlParameter('cropHealth');
+        document.getElementById('stickerAcreage').innerText = getUrlParameter('acreage');
+
+        // Generate the QR code with the alphanumeric code
+        new QRCode(document.getElementById('stickerQrCode'), {
+            text: getUrlParameter('uniqueCode'),
+            width: 128,
+            height: 128
+        });
+
+        // Function to print the sticker
+        function printSticker() {
+            window.print();
+        }
+    </script>
+
+</body>
+</html>
